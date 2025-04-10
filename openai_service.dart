@@ -8,7 +8,7 @@ class ApiService {
   Future<List<Map<String, String>>> generateWorkout(
       String goal, String fitnessLevel, double workoutTime, String bodyPart) async {
     try {
-      final String apiKey = await _getApiKey(); // Get API key from string resource
+      final String apiKey = await _getApiKey();
       if (apiKey.isEmpty) {
         print("API Key not found.");
         return [];
